@@ -1,9 +1,7 @@
 --Part 1
 
 isEven :: Int -> Bool
-isEven n = if (n `mod` 2 == 0)
-           then True
-           else False
+isEven n = mod n 2 == 0
 
 square :: Int -> Int
 square n = n * n
