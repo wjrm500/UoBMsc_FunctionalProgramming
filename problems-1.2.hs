@@ -23,8 +23,8 @@ maxList (x:xs) | x > maxList xs = x | otherwise = maxList xs
 
 
 allDucks :: [String] -> Bool
-allDucks [] = undefined
-allDucks (x:xs) = undefined
+allDucks [] = False
+allDucks (x:xs) = x == "duck" && (null xs || allDucks xs)
 
 duckDuckGoose :: [String] -> Bool
 duckDuckGoose = undefined
