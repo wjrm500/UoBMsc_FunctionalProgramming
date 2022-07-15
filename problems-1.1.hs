@@ -24,7 +24,11 @@ grade :: Int -> String
 grade n | n < 0 = "Marks cannot be negative"
         | n < 40 = "Fail"
         | n < 50 = "Low Pass"
-        | n < 60 = undefined
+        | n < 60 = "Medium Pass"
+        | n < 70 = "High Pass"
+        | n < 80 = "Merit"
+        | n <= 100 = "Distinction"
+        | otherwise = "Invalid mark"
 
 --Part 3
 
