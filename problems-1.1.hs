@@ -57,10 +57,9 @@ factorial' :: Int -> Int
 factorial' n = multiple [1..n]
 
 euclid :: Int -> Int -> Int
-euclid x y =
-    if x == y
-    then x
-    else euclid (min x y) (abs (x - y))
+euclid x y
+    | x == y = x
+    | otherwise = euclid (min x y) (abs (x - y))
 
 -- Part 4
 
