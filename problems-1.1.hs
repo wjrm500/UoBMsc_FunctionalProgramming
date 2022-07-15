@@ -9,7 +9,9 @@ square :: Int -> Int
 square n = n * n
 
 squareEven1 :: Int -> Int
-squareEven1 n = undefined
+squareEven1 n = if even n
+    then n * n
+    else n
 
 squareEven2 :: Int -> Int
 squareEven2 = undefined
