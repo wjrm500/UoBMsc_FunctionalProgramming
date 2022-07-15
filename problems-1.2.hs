@@ -11,7 +11,8 @@ collatz n
     | even n = n : collatz (div n 2)
     | otherwise  = n : collatz ((n * 3) + 1)
 
-colLength = undefined
+colLength :: Int -> Int
+colLength n = length(collatz n)
 
 -- Pattern Matching
 
