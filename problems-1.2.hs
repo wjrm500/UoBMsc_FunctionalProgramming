@@ -42,6 +42,12 @@ noDDucks ((name,age):xs)
     | head name /= 'D' = (name,age) : noDDucks xs
     | otherwise = noDDucks xs
 
+noDDucks' :: [(String,Int)] -> [String]
+noDDucks' [] = []
+noDDucks' ((name,age):xs)
+    | head name /= 'D' = name : noDDucks' xs
+    | otherwise = noDDucks' xs
+
 youngOrShort = undefined
 
 describeDucks = undefined
