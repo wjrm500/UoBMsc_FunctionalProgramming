@@ -38,7 +38,9 @@ ducks = [("Donald",6),("Daisy",5),("Huey",2),("Louie",2),("Dewey",2)]
 
 noDDucks :: [(String,Int)] -> [(String,Int)]
 noDDucks [] = []
-noDDucks ((name,age):xs) = undefined
+noDDucks ((name,age):xs)
+    | head name /= 'D' = (name,age) : noDDucks xs
+    | otherwise = noDDucks xs
 
 youngOrShort = undefined
 
