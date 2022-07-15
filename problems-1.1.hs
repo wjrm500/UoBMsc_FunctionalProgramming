@@ -38,7 +38,9 @@ factorial n
   | otherwise = n * factorial (n-1)
 
 triangle :: Int -> Int
-triangle n = undefined
+triangle n
+    | n == 1 = 1
+    | otherwise = n + triangle(n - 1)
 
 total :: [Int] -> Int 
 total xs | (xs == []) = 0
