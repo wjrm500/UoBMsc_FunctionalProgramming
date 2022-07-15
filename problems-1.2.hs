@@ -54,4 +54,6 @@ youngOrShort ((name,age):xs)
     | length name <= 3 || age < 3 = youngOrShort xs || True
     | otherwise = youngOrShort xs || False
 
-describeDucks = undefined
+describeDucks :: [(String,Int)] -> String
+describeDucks [] = ""
+describeDucks ((name,age):xs) = name ++ " is a duck who is " ++ show age ++ " years old. " ++ describeDucks xs
