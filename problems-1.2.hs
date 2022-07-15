@@ -6,7 +6,10 @@ halving n | n == 0 = []
           | even n = n : halving (div n 2)
 
 collatz :: Int -> [Int]
-collatz n = undefined
+collatz n
+    | n == 1 = [n]
+    | even n = n : collatz (div n 2)
+    | otherwise  = n : collatz ((n * 3) + 1)
 
 colLength = undefined
 
