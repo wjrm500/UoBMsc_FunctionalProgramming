@@ -43,11 +43,12 @@ triangle n
     | otherwise = n + triangle(n - 1)
 
 total :: [Int] -> Int 
-total xs | (xs == []) = 0
+total xs | xs == [] = 0
          | otherwise = head xs + total (tail xs)
 
 multiple :: [Int] -> Int
-multiple = undefined 
+multiple xs | null xs = 1
+            | otherwise = head xs * multiple(tail xs)
 
 triangle' :: Int -> Int
 triangle' n = total [1..n]
