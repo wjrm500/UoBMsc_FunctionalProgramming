@@ -5,6 +5,7 @@ isEven n = if (n `mod` 2 == 0)
            then True
            else False
 
+square :: Int -> Int
 square n = n * n
 
 squareEven1 :: Int -> Int
