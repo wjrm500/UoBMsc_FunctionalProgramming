@@ -19,7 +19,7 @@ colLength n = length(collatz n)
 maxList :: [Int] -> Int
 maxList [] = 0
 maxList [x] = x
-maxList (x:xs) = undefined
+maxList (x:xs) | x > maxList xs = x | otherwise = maxList xs 
 
 
 allDucks :: [String] -> Bool
