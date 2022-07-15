@@ -27,7 +27,9 @@ allDucks [] = False
 allDucks (x:xs) = x == "duck" && (null xs || allDucks xs)
 
 duckDuckGoose :: [String] -> Bool
-duckDuckGoose = undefined
+duckDuckGoose [] = False
+duckDuckGoose ["duck", "goose"] = True
+duckDuckGoose (x:xs) = x == "duck" && duckDuckGoose xs
 
 --Pairs
 
