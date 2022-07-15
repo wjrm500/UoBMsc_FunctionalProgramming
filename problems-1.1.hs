@@ -60,7 +60,7 @@ euclid :: Int -> Int -> Int
 euclid x y =
     if x == y
     then x
-    else euclid (min x y) (abs x - y)
+    else euclid (min x y) (abs (x - y))
 
 -- Part 4
 
