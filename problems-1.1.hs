@@ -54,7 +54,7 @@ triangle' :: Int -> Int
 triangle' n = total [1..n]
 
 factorial' :: Int -> Int
-factorial' = undefined
+factorial' n = multiple [1..n]
 
 euclid :: Int -> Int -> Int
 euclid x y = undefined
