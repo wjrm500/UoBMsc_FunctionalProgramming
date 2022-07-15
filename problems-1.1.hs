@@ -70,7 +70,8 @@ facDiv m n | (m > n) = (factorial m) `div` (factorial n)
            | (m < n) = (factorial n) `div` (factorial m)
            | otherwise = 1
 
-facDiv7 = undefined
+facDiv7 :: Int -> Int
+facDiv7 n = facDiv n 7
 
 facTri :: Bool -> Int -> Int
 facTri b n | b = factorial n
