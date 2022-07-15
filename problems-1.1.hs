@@ -9,8 +9,8 @@ square :: Int -> Int
 square n = n * n
 
 squareEven1 :: Int -> Int
-squareEven1 n = if even n
-    then n * n
+squareEven1 n = if isEven n
+    then square n
     else n
 
 squareEven2 :: Int -> Int
