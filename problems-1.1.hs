@@ -77,4 +77,6 @@ facTri :: Bool -> Int -> Int
 facTri b n | b = factorial n
            | otherwise = triangle n
 
-facEvenTriOdd = undefined
+facEvenTriOdd n
+    | even n = factorial n
+    | otherwise = triangle n
