@@ -35,8 +35,6 @@ duckDuckGoose (x:xs) = x == "duck" && duckDuckGoose xs
 
 ducks :: [(String,Int)]
 ducks = [("Donald",6),("Daisy",5),("Huey",2),("Louie",2),("Dewey",2)]
-ducks2 :: [(String,Int)]
-ducks2 = [("Donald",6),("Daisy",5)]
 
 noDDucks :: [(String,Int)] -> [(String,Int)]
 noDDucks [] = []
@@ -52,9 +50,8 @@ noDDucks' ((name,age):xs)
 
 youngOrShort :: [(String,Int)] -> Bool
 youngOrShort [] = False
-youngOrShort ((name,age):xs) =
-    if (length name <= 3) || (age < 3)
-    then (True || youngOrShort xs)
-    else (False || youngOrShort xs)
+youngOrShort ((name,age):xs)
+    | length name <= 3 || age < 3 = youngOrShort xs || True
+    | otherwise = youngOrShort xs || False
 
 describeDucks = undefined
