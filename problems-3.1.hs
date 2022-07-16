@@ -20,6 +20,9 @@ onlyLetters [] = []
 onlyLetters (c:cs) | isLetter c  = c : onlyLetters cs
                    | otherwise   =     onlyLetters cs
 
+onlyLetters' :: String -> String
+onlyLetters' = filter isLetter
+
 onlyNumsOrLetters = undefined
 
 onlyLettersToLower1 st = undefined
