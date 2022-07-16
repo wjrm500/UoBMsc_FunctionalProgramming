@@ -7,7 +7,7 @@ donald :: Duck
 donald = Duck "Donald" 6 1.1
 
 daisy :: Duck
-daisy = Duck "Daisy" 5 1.0
+daisy = Duck "Daisy" 5 0.5
 
 huey :: Duck
 huey = Duck "Huey" 2 1.2
@@ -26,4 +26,5 @@ duckFamily = [donald,daisy,huey,dewey]
 birthday :: Duck -> Duck
 birthday (Duck n a h) = Duck n (a + 1) h
 
-tall = undefined
+tall :: Duck -> Bool
+tall (Duck n a h) = h > 0.6
