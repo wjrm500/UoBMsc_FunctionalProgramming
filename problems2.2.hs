@@ -1,19 +1,19 @@
-import qualified Data.Text as T
+-- import qualified Data.Text as T
 
-data Duck = Duck String Int 
+data Duck = Duck String Int Float
   deriving Show
 
 donald :: Duck
-donald = Duck "Donald" 6 
+donald = Duck "Donald" 6 1.1
 
 daisy :: Duck
-daisy = Duck "Daisy" 5 
+daisy = Duck "Daisy" 5 1.0
 
 huey :: Duck
-huey = Duck "Huey" 2 
+huey = Duck "Huey" 2 1.2
 
 dewey :: Duck
-dewey = Duck "Dewey" 2
+dewey = Duck "Dewey" 2 0.9
 
 duckFamily :: [Duck]
 duckFamily = [donald,daisy,huey,dewey]
@@ -24,6 +24,6 @@ duckFamily = [donald,daisy,huey,dewey]
 --           age  = (read (T.unpack (T.splitOn (T.pack " ") (T.pack (show d)) !! 2)) :: Int) + 1
 
 birthday :: Duck -> Duck
-birthday (Duck n a) = Duck n (a + 1)
+birthday (Duck n a h) = Duck n (a + 1) h
 
 tall = undefined
