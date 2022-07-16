@@ -44,7 +44,8 @@ secondNames = ["Ashe","Brown","Cook","De Santis"]
 wholeNames :: [(String, String)]
 wholeNames = zip firstNames secondNames
 
-countNames = undefined
+countNames :: [String] -> [(Int, String)]
+countNames ns = zip [1..] ns
 
 wholeNames2 = zipWith (++) firstNames secondNames
               
