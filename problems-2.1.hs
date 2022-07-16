@@ -7,7 +7,10 @@ toUpperSt [] = []
 toUpperSt (c:cs) = toUpper c : toUpperSt cs
 
 deleteDigits :: String -> String
-deleteDigits = undefined
+deleteDigits [] = []
+deleteDigits (c:cs)
+    | isDigit c = deleteDigits cs
+    | otherwise = c : deleteDigits cs
 
 leetSpeak :: String -> String
 leetSpeak = undefined
