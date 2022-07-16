@@ -3,8 +3,7 @@ import Data.Char
 ---Maps
 
 toLowerSt :: String -> String
-toLowerSt [] = []
-toLowerSt (c:cs) = toLower c : toLowerSt cs
+toLowerSt = map toLower
 
 toLowerCons :: Char -> Char
 toLowerCons = undefined
