@@ -23,11 +23,15 @@ onlyLetters (c:cs) | isLetter c  = c : onlyLetters cs
 onlyLetters' :: String -> String
 onlyLetters' = filter isLetter
 
-onlyNumsOrLetters = undefined
+onlyNumsOrLetters :: String -> String
+onlyNumsOrLetters = filter isNumOrLetter
+      where isNumOrLetter c = isDigit c || isLetter c
 
-onlyLettersToLower1 st = undefined
+onlyLettersToLower1 :: String -> String
+onlyLettersToLower1 st = map toLower (filter isLetter st)
 
-onlyLettersToLower2 st = undefined
+onlyLettersToLower2 :: String -> String
+onlyLettersToLower2 st = filter isLetter (map toLower st)
 
 ---Zips
 
@@ -37,6 +41,7 @@ firstNames = ["Adam","Brigitte","Charlie","Dora"]
 secondNames :: [String]
 secondNames = ["Ashe","Brown","Cook","De Santis"]
 
+wholeNames :: [(String, String)]
 wholeNames = zip firstNames secondNames
 
 countNames = undefined
