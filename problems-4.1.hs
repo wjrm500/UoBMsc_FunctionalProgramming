@@ -14,6 +14,9 @@ onlyLetters [] = []
 onlyLetters (c:cs) | isLetter c  = c : onlyLetters cs
                    | otherwise   =     onlyLetters cs
 
+onlyLetters' :: String -> String
+onlyLetters' s = [n | n <- s, isLetter n]
+
 onlyNumsOrLetters :: String -> String
 onlyNumsOrLetters = undefined
 
