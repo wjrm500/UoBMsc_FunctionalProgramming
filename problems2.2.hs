@@ -1,6 +1,6 @@
 -- import qualified Data.Text as T
 
-data Duck = Duck String Int Float
+data Duck = Duck String Int Float | Duckling String Int Float
   deriving Show
 
 donald :: Duck
@@ -10,10 +10,10 @@ daisy :: Duck
 daisy = Duck "Daisy" 5 0.5
 
 huey :: Duck
-huey = Duck "Huey" 2 1.2
+huey = Duckling "Huey" 2 1.2
 
 dewey :: Duck
-dewey = Duck "Dewey" 2 0.9
+dewey = Duckling "Dewey" 2 0.9
 
 duckFamily :: [Duck]
 duckFamily = [donald,daisy,huey,dewey]
