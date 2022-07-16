@@ -4,7 +4,7 @@ import Data.Char
 
 toUpperSt :: String -> String
 toUpperSt [] = []
-toUpperSt (c:cs) = undefined
+toUpperSt (c:cs) = toUpper c : toUpperSt cs
 
 deleteDigits :: String -> String
 deleteDigits = undefined
