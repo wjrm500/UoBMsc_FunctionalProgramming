@@ -18,7 +18,7 @@ onlyLetters' :: String -> String
 onlyLetters' s = [n | n <- s, isLetter n]
 
 onlyNumsOrLetters :: String -> String
-onlyNumsOrLetters = undefined
+onlyNumsOrLetters s = [n | n <- s, isDigit n || isLetter n]
 
 onlyLettersToLower :: String -> String
 onlyLettersToLower = undefined
