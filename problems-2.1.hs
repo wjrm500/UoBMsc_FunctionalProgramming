@@ -13,7 +13,12 @@ deleteDigits (c:cs)
     | otherwise = c : deleteDigits cs
 
 leetSpeak :: String -> String
-leetSpeak = undefined
+leetSpeak [] = ['!']
+leetSpeak (c:cs)
+    | c == 'e' = '7' : leetSpeak cs
+    | c == 'o' = '0' : leetSpeak cs
+    | c == 's' = 'z' : leetSpeak cs
+    | otherwise = c : leetSpeak cs
 
 --Exercise 2
 
