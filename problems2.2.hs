@@ -1,3 +1,5 @@
+import qualified Data.Text as T
+
 data Duck = Duck String Int 
   deriving Show
 
@@ -17,6 +19,8 @@ duckFamily :: [Duck]
 duckFamily = [donald,daisy,huey,dewey]
 
 birthday :: Duck -> Duck
-birthday = undefined
+birthday d = Duck name age
+    where name = init (tail (T.unpack (T.splitOn (T.pack " ") (T.pack (show d)) !! 1)))
+          age  = (read (T.unpack (T.splitOn (T.pack " ") (T.pack (show d)) !! 2)) :: Int) + 1
 
 tall = undefined
