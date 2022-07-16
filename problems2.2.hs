@@ -13,7 +13,7 @@ huey :: Duck
 huey = Duckling "Huey" 2 1.2
 
 dewey :: Duck
-dewey = Duckling "Dewey" 2 0.9
+dewey = Duckling "Dewey" 1 0.9
 
 duckFamily :: [Duck]
 duckFamily = [donald,daisy,huey,dewey]
@@ -25,7 +25,9 @@ duckFamily = [donald,daisy,huey,dewey]
 
 birthday :: Duck -> Duck
 birthday (Duck n a h) = Duck n (a + 1) h
-birthday (Duckling n a h) = Duckling n (a + 1) h
+birthday (Duckling n a h)
+    | a < 2 = Duckling n (a + 1) h
+    | otherwise = Duck n (a + 1) h
 
 tall :: Duck -> Bool
 tall (Duck n a h) = h > 0.6
