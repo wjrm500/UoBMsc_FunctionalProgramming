@@ -6,9 +6,12 @@ toLowerSt :: String -> String
 toLowerSt = map toLower
 
 toLowerCons :: Char -> Char
-toLowerCons = undefined
+toLowerCons c
+      | elem (toLower c) ['a', 'e', 'i', 'o', 'u'] = c
+      | otherwise = toLower c
 
-toLowerConsSt = undefined
+toLowerConsSt :: String -> String
+toLowerConsSt = map toLowerCons
 
 ---Filters
 
