@@ -47,11 +47,10 @@ wholeNames = zip firstNames secondNames
 countNames :: [String] -> [(Int, String)]
 countNames ns = zip [1..] ns
 
+wholeNames2 :: [String]
 wholeNames2 = zipWith (++) firstNames secondNames
-              
 
-
-rollCall :: [String]
-rollCall = zipWith call xs firstNames
-           where call = undefined
-                 xs   = undefined
+rollCall :: [String] -> [String]
+rollCall ns = zipWith call xs ns
+      where call x y = x ++ ": " ++ y ++ "? Present!"
+            xs       = map show [1..]
