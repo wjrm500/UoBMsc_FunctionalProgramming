@@ -21,4 +21,7 @@ onlyNumsOrLetters :: String -> String
 onlyNumsOrLetters s = [n | n <- s, isDigit n || isLetter n]
 
 onlyLettersToLower :: String -> String
-onlyLettersToLower = undefined
+onlyLettersToLower s = [toLowerIfLetter n | n <- s] where
+    toLowerIfLetter c
+        | isLetter c = toLower c
+        | otherwise = c
