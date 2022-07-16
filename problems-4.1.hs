@@ -6,6 +6,8 @@ toLowerSt :: String -> String
 toLowerSt [] = []
 toLowerSt (c:cs) = toLower c : toLowerSt cs
 
+toLowerSt' :: String -> String
+toLowerSt' s = [toLower n | n <- s]
 
 onlyLetters :: String -> String
 onlyLetters [] = []
